@@ -39,6 +39,7 @@
 
 *,*::before,*::after{box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+html,body{overflow-x:hidden;}
 body{
   margin:0;
   background:var(--bg);
@@ -541,4 +542,21 @@ a:focus-visible, button:focus-visible{
   .footer-inner{flex-direction:column;}
   .whatsapp-float{right:18px; bottom:18px; width:54px; height:54px;}
   .whatsapp-float svg{width:26px; height:26px;}
+}
+
+
+/* === Responsive fixes by ChatGPT === */
+img{max-width:100%;height:auto}
+iframe{max-width:100%}
+.hero-illustration img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;display:block}
+.location-map iframe{width:100%;border-radius:var(--radius-lg);display:block}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .header-inner{gap:16px}
+  .hero{min-height:auto;padding:24px 0 56px}
+  .hero-card{max-width:100%;padding:24px}
+  .about,.themes,.how,.gallery,.faq,.location,.final-cta{padding:72px 0}
+  .about-stats{flex-wrap:wrap;gap:20px}
+  h2.center{margin-bottom:32px}
 }
